@@ -34,6 +34,7 @@ public class VoteServiceImpl implements VoteService {
         Date currentDate = new Date();
 
         Vote vote = repository.get(currentDate, userId);
+        System.out.println(vote);
         if (isNull(vote)) {
             vote = new Vote();
         } else {
