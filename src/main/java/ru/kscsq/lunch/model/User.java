@@ -32,7 +32,6 @@ public class User extends NamedEntity {
     @Column(name = "password", nullable = false)
     @NotBlank
     @Length(min = 5)
-    //@JsonIgnore
     private String password;
 
     @Column(name = "enabled", nullable = false, columnDefinition = "bool default true")

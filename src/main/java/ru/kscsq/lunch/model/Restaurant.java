@@ -30,9 +30,7 @@ public class Restaurant extends NamedEntity {
     @JsonIgnore
     private List<Vote> votes;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")//, cascade = CascadeType.REMOVE, orphanRemoval = true)
-//    @OrderBy("dateTime DESC")
-//    @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restaurant")
     private List<Meal> meals;
 
     public Restaurant() {

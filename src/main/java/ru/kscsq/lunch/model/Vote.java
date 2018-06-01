@@ -15,7 +15,6 @@ public class Vote extends BaseEntity {
     public static final String GET_BY_DATE = "Vote.getVoteDate";
 
     @Column(name = "date")
-   // @Temporal(TemporalType.DATE)
     @JsonIgnore
     private Date date = new Date();
 

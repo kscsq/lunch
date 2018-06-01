@@ -9,14 +9,14 @@ public class VoteUtil {
 
     public static final String EXCEPTION_VOTING_RESTRICTION = "exception.vote.restrictionVote";
 
-    private static LocalTime limitTime = LocalTime.of(11, 0);
+    private static LocalTime cutOffTime = LocalTime.of(11, 0);
 
     public static LocalTime getTime() {
-        return limitTime;
+        return cutOffTime;
     }
 
     public static void setTime(LocalTime limitTime) {
-        VoteUtil.limitTime = limitTime;
+        VoteUtil.cutOffTime = limitTime;
     }
 
     public static void checkingTimeForSecondVote () {
