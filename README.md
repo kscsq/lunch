@@ -424,7 +424,7 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 201; Time: 432ms; Content length: 13 bytes
     
-### Repeat vote for a particular restaurant after cur-off time
+### Repeat vote for a particular restaurant after cut-off time
     
 #### Request
     
