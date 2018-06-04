@@ -19,21 +19,21 @@ As a result, provide a link to github repository. It should contain the code, RE
 
 
 
-##Instructions
+## Instructions
 
 1. Clone this repository into your local machine in the directory you picked
 2. Make sure you set LUNCH_ROOT(p.1 directory) as your environment variable
 3. Run from Intellij Idea and make sure "lunch" artifact is successfully deployed and web page with "Loaded" is shown
 
 
-##Database
+## Database
 HSQLDB embedded database is used so no further installations are expected
 
-##REST commands to be used
+## REST commands to be used
 
-###Add new user
+### Add new user
 
-####Request
+#### Request
 
     POST http://localhost:8080/lunch/rest/admin/users
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
@@ -42,7 +42,7 @@ HSQLDB embedded database is used so no further installations are expected
     {    "name": "AddUser",    "email": "AddUser@yandex.ru",    "password": "AddPassword",    "roles": ["ROLE_USER"] }
 
 
-####Response
+#### Response
 
     HTTP/1.1 201 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -70,15 +70,15 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 201; Time: 459ms; Content length: 164 bytes
 
-###Get all restaurants
+### Get all restaurants
 
-####Request
+#### Request
 
     GET http://localhost:8080/lunch/rest/restaurants/
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
     Content-Type: application/json
 
-####Response
+#### Response
 
     HTTP/1.1 200 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -114,15 +114,15 @@ HSQLDB embedded database is used so no further installations are expected
 
     Response code: 200; Time: 850ms; Content length: 280 bytes
 
-###Get particular restaurant
+### Get particular restaurant
 
-####Request
+#### Request
 
     GET http://localhost:8080/lunch/rest/restaurants/100002
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
     Content-Type: application/json
 
-####Response
+#### Response
 
     HTTP/1.1 200 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -144,9 +144,9 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 200; Time: 141ms; Content length: 92 bytes
 
-###Add new restaurant
+### Add new restaurant
 
-####Request
+#### Request
 
     POST http://localhost:8080/lunch/rest/admin/restaurants/
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
@@ -154,7 +154,7 @@ HSQLDB embedded database is used so no further installations are expected
     
     {    "name": "NewRestaurant"}
 
-####Response
+#### Response
 
     HTTP/1.1 201 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -176,15 +176,15 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 201; Time: 421ms; Content length: 80 bytes
 
-###Remove a restaurant
+### Remove a restaurant
 
-####Request
+#### Request
 
     DELETE http://localhost:8080/lunch/rest/admin/restaurants/100019
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
     Content-Type: application/json
 
-####Response
+#### Response
 
     HTTP/1.1 200 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -200,9 +200,9 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 200; Time: 111ms; Content length: 0 bytes
 
-###Update a restaurant
+### Update a restaurant
 
-####Request
+#### Request
 
     PUT http://localhost:8080/lunch/rest/admin/restaurants/100002
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
@@ -210,7 +210,7 @@ HSQLDB embedded database is used so no further installations are expected
     
     {    "name": "Restaurant 1 updated"}
 
-####Response
+#### Response
 
     HTTP/1.1 200 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -226,15 +226,15 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 200; Time: 295ms; Content length: 0 bytes
 
-###Get lunch in a particular restaurant by date
+### Get lunch in a particular restaurant by date
 
-####Request
+#### Request
 
     GET http://localhost:8080/lunch/rest/restaurants/100003/lunch?date=2018-05-06
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
     Content-Type: application/json
 
-####Response
+#### Response
 
     HTTP/1.1 200 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -273,15 +273,15 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 200; Time: 115ms; Content length: 303 bytes
 
-###Get particular meal in a particular restaurant
+### Get particular meal in a particular restaurant
 
-####Request
+#### Request
 
     GET http://localhost:8080/lunch/rest/restaurants/100003/meals/100009
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
     Content-Type: application/json
 
-####Response
+#### Response
 
     HTTP/1.1 200 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -304,9 +304,9 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 200; Time: 85ms; Content length: 96 bytes
 
-###Add new meal for a particular restaurant
+### Add new meal for a particular restaurant
 
-####Request
+#### Request
 
     POST http://localhost:8080/lunch/rest/admin/restaurants/100003/meals/
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
@@ -318,7 +318,7 @@ HSQLDB embedded database is used so no further installations are expected
       "price": 1000.00
     }
 
-####Response
+#### Response
 
     HTTP/1.1 201 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -341,9 +341,9 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 201; Time: 102ms; Content length: 79 bytes
 
-###Update meal for a particular restaurant
+### Update meal for a particular restaurant
 
-####Request
+#### Request
 
     PUT http://localhost:8080/lunch/rest/admin/restaurants/100003/meals/
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
@@ -356,7 +356,7 @@ HSQLDB embedded database is used so no further installations are expected
       "price": 1005.00
     }
 
-####Response
+#### Response
 
     HTTP/1.1 200 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -372,15 +372,15 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 200; Time: 77ms; Content length: 0 bytes
 
-###Delete meal in a particular restaurant
+### Delete meal in a particular restaurant
 
-####Request
+#### Request
 
     DELETE http://localhost:8080/lunch/rest/admin/restaurants/100003/meals/100020
     Authorization: Basic YWRtaW5AZ21haWwuY29tOmFkbWlu
     Content-Type: application/json
 
-####Response
+#### Response
 
     HTTP/1.1 200 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -396,15 +396,15 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 200; Time: 64ms; Content length: 0 bytes
 
-###Vote for a particular restaurant
+### Vote for a particular restaurant
 
-####Request
+#### Request
 
     POST http://localhost:8080/lunch/rest/profile/restaurants/100002/vote
     Authorization: Basic dXNlckB5YW5kZXgucnU6cGFzc3dvcmQ=
     Content-Type: application/json
 
-####Response
+#### Response
 
     HTTP/1.1 201 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -424,15 +424,15 @@ HSQLDB embedded database is used so no further installations are expected
     
     Response code: 201; Time: 432ms; Content length: 13 bytes
     
-###Repeat vote for a particular restaurant after cur-off time
+### Repeat vote for a particular restaurant after cur-off time
     
-####Request
+#### Request
     
         POST http://localhost:8080/lunch/rest/profile/restaurants/100002/vote
         Authorization: Basic dXNlckB5YW5kZXgucnU6cGFzc3dvcmQ=
         Content-Type: application/json
     
-####Response
+#### Response
     
     HTTP/1.1 304 
     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
